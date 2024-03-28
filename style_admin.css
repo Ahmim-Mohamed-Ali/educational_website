@@ -1,0 +1,40 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+nav{
+width: 100%;
+}
+
+ul li a{
+text-decoration:none;
+font-weight: bold;
+color:white;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+}
+
+ul{
+    background-color:blue;
+    display:flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.student{
+    background-color: blue;
+}
+
+.all-students{
+    background-color:white;
+    display:flex;
+    gap:20px;
+}
+
+.welcome{
+margin-top: 5%;
+margin-bottom: 5%;
+text-align: center;
+}
