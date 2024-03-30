@@ -1,3 +1,4 @@
+
 <div class="chat">
         <div class="button-email">
             <span><?= $_SESSION['login'] ?></span>
@@ -28,7 +29,8 @@
             <?php endif; ?>               
         </div>
         <form action="forum.php" class="send_message" method="post">
-        <textarea name="message" id="" cols="30" rows="2" placeholder="Votre Mesage"></textarea>
-        <input type="submit" value="Envoyez" name="send">
+            <textarea name="message" id="" cols="30" rows="2" placeholder="Votre Message"></textarea>
+            <input type="submit" value="Envoyez" name="send">
         </form>
+
     </div>

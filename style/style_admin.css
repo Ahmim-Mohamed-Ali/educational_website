@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+nav{
+width: 100%;
+}
+
+ul li a{
+text-decoration:none;
+font-weight: bold;
+color:white;
+}
+
+ul li a:hover{
+    text-decoration: underline;
+}
+
+ul{
+    background-color:grey;
+    display:flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+.student{
+    background-color: blue;
+}
+
+.all-students{
+    background-color:white;
+    display:flex;
+     gap:20px;
+}
+
+.welcome{
+margin-top: 5%;
+margin-bottom: 5%;
+text-align: center;
+}
+
+.all-courses img{
+    width: 50%;
+}
+
+.all{
+    padding: 8px 8px;
+    width: 100%;
+    background-color: green;
+    margin: 20px;
+}
+
+.all-students{
+    background-color: green;
+}
+.all h2{
+    text-align:center;
+    color:white;
+}
+
+.cours{
+    display:block;
+
+    border: 1px solid black;
+}
+
+.all-courses{
+    gap:5%;
+    display:flex;
+    flex-wrap: wrap;
+}

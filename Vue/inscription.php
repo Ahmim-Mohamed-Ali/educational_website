@@ -1,4 +1,5 @@
 <?php 
+session_start();
 require_once '../Controleur/RegisterController.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -7,8 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(isset($_POST['email']) && isset($_POST['mdp1']) && $_POST['mdp1']==$_POST['mdp2']){
         $email = $_POST['email'];
         $password = $_POST['mdp1'];
-       $registerController->RegisterUser($email,$password);
-
+        $id_prof=$_SESSION['id'];
+       $registerController->RegisterUser($email,$password,$id_prof);
+        if($registerController->getMessage()!=null){
+            $error=$registerController->getMessage();
+        }
     }
     else{
         $error="Veuillez Remplir Tout les Champs avec des mots de passes identiques !";
@@ -27,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
 

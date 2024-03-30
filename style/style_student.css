@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding:0;
+
+
+}
+
+
+.header{
+    background-color: #1877f2;
+    display:flex;
+    justify-content: space-between;
+align-items: center;
+}
+
+.header img {
+    width: 75px;
+    border-radius: 80%;
+}
+.header nav ul li{
+    margin-left: 10px;
+    background-color: white;
+}
+
+.header nav ul {
+    display: flex;
+    list-style-type:none ;
+}
+
+.header nav ul li a{
+color: #1877f2;
+text-decoration: none;
+}
+
+h1{font-weight: 300;
+    text-align: center;
+    margin-top: 3%;
+    margin-bottom: 3%;
+}
+
+h1 span{
+    font-weight: bold;
+    color:#1877f2;
+}
+
+.cours_section{
+    background-color: #1877f2;
+}
+
+.cours_section h2 {
+    color: white;
+    text-align: center;
+}
+
+.all-cours {
+padding: 10px;
+    display:flex;
+}
+
+ .cours{
+    padding: 5px;
+    border-radius: 25px;
+    background-color: white;
+    display: flex;
+    max-width: 25%;
+    flex-direction: column;align-items: center;justify-content: center;
+}
+
+.cours img{
+    width: 50%;
+}
+
+.cours h3 {
+    text-align: center;
+    text-decoration: underline;
+    color: #1877f2;
+    margin-bottom: 5px;
+}
+
+.cours p{
+    margin-bottom: 5px;
+}
+.item-cours{
+    background-color: green;
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+    }
+
+.item-cours button {
+    background-color: #1877f2;
+    width: 50px;
+}   
+
+
+.item-cours a{
+text-decoration: none;
+    color: white;
+}
+
+.cours form button{
+    background-color: #1877f2; color: white;
+}

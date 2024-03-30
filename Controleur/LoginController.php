@@ -14,6 +14,8 @@ class LoginController {
         if ($user) {
             session_start();
             // L'utilisateur est connecté avec succès, redirigez-le vers une autre page par exemple.
+            $_SESSION['id']=$user['id'];
+            
             $_SESSION['login']=$email;
             if($user['role']=="etudiant"){
                 $_SESSION['admin']=false;

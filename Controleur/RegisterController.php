@@ -12,15 +12,15 @@ class RegisterController {
     }
 
 
-    public function RegisterUser($email,$password){
-        $user = $this->userModel->InsertUserInDatabase($email, $password);
+    public function RegisterUser($email,$password,$id_prof){
+        $user = $this->userModel->InsertUserInDatabase($email, $password,$id_prof);
         if ($user) {
             session_start();
             $_SESSION['email_account']=$email;
             header('Location: confirm_user.php');
         }
         else{
-            $Message="Compte Non Crée";
+            $this->Message="Compte Non Crée";
         }
     }
 

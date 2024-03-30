@@ -10,15 +10,22 @@ class GetAllController {
 
 
     public function getAllStudents() {
-        // Créer une instance du modèle pour accéder à la méthode de récupération des étudiants
-        $userModel = new UserModel();
         // Appeler la méthode du modèle pour récupérer tous les étudiants
-        $students = $userModel->getAllStudentsFromDatabase();
+        $students = $this->userModel->getAllStudentsFromDatabase();
         include '../Vue/manage.php';
     }
 
     public function getStudents() {
         return $this->students;
     }
+
+
+    public function getMyStudents($id) {
+        // Appeler la méthode du modèle pour récupérer tous les étudiants
+        $students = $this->userModel->getMyStudentsFromDatabase($id);
+        include '../Vue/manage.php';
+    }
+
+
 }
 ?>

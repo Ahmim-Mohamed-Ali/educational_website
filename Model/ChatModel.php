@@ -44,7 +44,12 @@ class ChatModel {
     public function AddMessageInDatabase($email,$message){
         $my_insert_statement = Connexion::getDb()->prepare("INSERT INTO chat (email, message) VALUES (:email, :message)");
     $my_insert_statement->bindParam(':email', $email);
-    $my_insert_statement->bindParam(':password', $message);
+    $my_insert_statement->bindParam(':message', $message);
+    if ($my_insert_statement->execute()) {
+        return true;
+      } else {
+        return false;
+      }
     }
 
 

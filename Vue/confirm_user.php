@@ -16,6 +16,8 @@
       <span>Login:</span>  <p><?= $_SESSION['email_account'] ?></p>
     </div>
 </div>
-    <?php header("Location: login.php ") ?>
+    <?php     
+    sleep(3);
+    header("Location: welcome_admin.php ") ?>
 </body>
 </html>

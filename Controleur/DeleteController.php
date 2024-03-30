@@ -8,11 +8,14 @@ class DeleteController {
     }
 
 
-    public function DeleteStudent($user_id) {
-        // Créer une instance du modèle pour accéder à la méthode de récupération des étudiants
-           // Appeler la méthode du modèle pour récupérer tous les étudiants
-        $success = $this->userModel->deleteUserFromDatabase($user_id);
-        return $success;
+    public function DeleteStudent($user_id,$prof_id) {
+        $success = $this->userModel->deleteUserFromDatabase($user_id,$prof_id);
+        if($success){
+            header("Location: welcome_admin.php");
+        }
+        else{
+            echo "L'étudiant n'a pas pu etre supprimé";
+        }
     }
 
 

@@ -14,8 +14,6 @@ class ChatController {
     public function RecupererChat($email){
         $messages = $this->chatModel->getMessageInDatabase($email);
         if($messages!==null){
-            $yours_message=$this->chatModel->GetYourMessage();
-            $others_message=$this->chatModel->GetOtherMessage();
             include '../Vue/chat.php';
         }
         else{
@@ -25,7 +23,9 @@ class ChatController {
     }
 
     public function AddChat($email,$message){
-        $this->chatModel->AddMessageInDatabase($email,$message);
-        header("Location: forum.php") ;
+        if($this->chatModel->AddMessageInDatabase($email,$message)==true){
+            header("Location: forum.php") ;
+        }
+        
     }
 }    
