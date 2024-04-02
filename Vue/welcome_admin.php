@@ -35,16 +35,16 @@ if(isset($_POST['delete'])){echo "Hello";
     <script src="../script.js"></script>
 </head>
 <body>
-
-<nav>
+<?php include "header.php" ?>
+<!-- <nav>
     <ul>
         <li><a href="addcours.php">Ajouter Un Cours </a></li>
         <li><a href="manage.php">Gérer Les QCM</a></li>
         <li><a href="inscription.php">Inscrire Un Etudiant</a></li>
         <li><a href="../Controleur/Deconnexion_account.php">Se Deconnecter</a></li>
     </ul>
-</nav>
-    <h2 class="welcome">Bienvenu sur votre Espace Administrateur <?= $_SESSION['login'] ?></h2>
+</nav> -->
+    <h2 class="welcome">Bienvenu sur votre Espace Administrateur <span> <?= $_SESSION['login'] ?> </span></h2>
 
     <div class="all">
         <h2>Liste De Vos Etudiants</h4>
@@ -57,7 +57,7 @@ if(isset($_POST['delete'])){echo "Hello";
         <h2>Liste De Vos Cours</h4>
         <div class="all-courses">
         <?php 
-        $coursController->RecupererCours($id); ?>
+        $coursController->RetriveCoursForAdmin($id); ?>
         </div>
     </div>    
 </body>

@@ -33,10 +33,13 @@ class CoursModel {
     public function DeleteCours($id){
         $query = Connexion::getDb()->prepare("DELETE FROM cours WHERE id = ? ");
         $query2 = Connexion::getDb()->prepare("DELETE FROM cours_prof WHERE id_cours = ? ");
-        if ($query->execute([$id]) && $query->execute([$id])) {
-            return true;
+        if ($query2->execute([$id]) ) {
+            if($query->execute([$id])){
+                return true;
+            }else{return false;}
+           
           } else {
-            return null;
+            return false;
           }
     }
 
@@ -54,9 +57,9 @@ class CoursModel {
     }
 
     public function GetCourOfTeacher($id){
-        $sql = "SELECT *
+        $sql = "SELECT titre,description,chemin,url,email,id_prof
         FROM cours
-        INNER JOIN cours_prof ON cours.id = cours_prof.id_cours
+        INNER JOIN cours_prof ON cours.id = cours_prof.id_cours JOIN users ON users.id=cours_prof.id_prof
         WHERE cours_prof.id_prof = :id_prof";
         // Préparation de la requête
         $stmt = Connexion::getDb()->prepare($sql);
@@ -65,8 +68,27 @@ class CoursModel {
         // Exécution de la requête
         $stmt->execute();
         // Récupération des résultats
-        $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC);    
+        $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC); 
         return $resultats;
     }
+
+    public function GetCourOfThisTeacher($id){
+        $sql = "SELECT *
+        FROM cours
+        INNER JOIN cours_prof ON cours.id = cours_prof.id_cours 
+        WHERE cours_prof.id_prof = :id_prof";
+        // Préparation de la requête
+        $stmt = Connexion::getDb()->prepare($sql);
+        // Liaison du paramètre
+        $stmt->bindParam(':id_prof', $id, PDO::PARAM_INT);
+        // Exécution de la requête
+        $stmt->execute();
+        // Récupération des résultats
+        $resultats = $stmt->fetchAll(PDO::FETCH_ASSOC); 
+        return $resultats;
+    }
+
+
+
 }
 ?>

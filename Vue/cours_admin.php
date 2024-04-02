@@ -1,8 +1,8 @@
 <?php foreach ($cours as  $cour): ?>
     <div class="cours ">
         <h4> <?= $cour['titre'] ?></h4>
-        <p>Description: <?= $cour['description'] ?></p>
-        <p>Url Vidéo: <?= $cour['url'] ?></p>
+        <p> <span>Description: </span><?= $cour['description'] ?></p>
+        <p> <span>Url Vidéo: </span> <?= $cour['url'] ?></p>
         <img src="../img/cours_default_image.webp" alt="" srcset="" class="image_cours">
         <button><a href="<?= $cour['chemin'] ?>" target="_blank">Voir le Cours</a></button>
         <form action="" method="post">

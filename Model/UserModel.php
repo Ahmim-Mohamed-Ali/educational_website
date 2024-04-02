@@ -24,7 +24,8 @@ class UserModel {
 
     public function InsertUserInDatabase($email, $password,$id_prof) {
         $user = $this->getUserInDatabase($email, $password);
-        if ($user) {
+        var_dump($user);
+        if (!$user) {
             $role="etudiant";
             $my_insert_statement = Connexion::getDb()->prepare("INSERT INTO users (email, password,role) VALUES (:email, :password,:role)");
             $my_insert_statement->bindParam(':email', $email);

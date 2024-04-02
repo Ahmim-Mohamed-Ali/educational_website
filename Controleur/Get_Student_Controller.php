@@ -23,7 +23,7 @@ class GetAllController {
     public function getMyStudents($id) {
         // Appeler la méthode du modèle pour récupérer tous les étudiants
         $students = $this->userModel->getMyStudentsFromDatabase($id);
-        include '../Vue/manage.php';
+        include '../Vue/manage_student.php';
     }
 
 

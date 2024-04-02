@@ -14,7 +14,7 @@ if (!isset($_SESSION['admin']) || $_SESSION['admin'] !== true) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     $id_prof=$_SESSION['id'];
     $coursController = new CoursController();
-    $coursController->ajouterCours($id_prof);
+    $coursController->AddCours($id_prof);
 
 }
 ?>

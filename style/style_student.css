@@ -2,7 +2,6 @@
     margin: 0;
     padding:0;
 
-
 }
 
 
@@ -12,7 +11,7 @@
     justify-content: space-between;
 align-items: center;
 }
-
+.header nav {margin-right: 30px;}
 .header img {
     width: 75px;
     border-radius: 80%;
@@ -20,6 +19,8 @@ align-items: center;
 .header nav ul li{
     margin-left: 10px;
     background-color: white;
+    padding:3px;
+    border-radius: 7%;
 }
 
 .header nav ul {
@@ -48,21 +49,28 @@ h1 span{
 }
 
 .cours_section h2 {
+    padding:5px;
     color: white;
     text-align: center;
+    margin-bottom: 2%;
+    text-decoration: underline;
 }
 
 .all-cours {
 padding: 10px;
     display:flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 5px;
 }
 
- .cours{
-    padding: 5px;
+ .cours {
+
+    padding: 10px;
     border-radius: 25px;
     background-color: white;
     display: flex;
-    max-width: 25%;
+    width: 30%;
     flex-direction: column;align-items: center;justify-content: center;
 }
 
@@ -75,13 +83,13 @@ padding: 10px;
     text-decoration: underline;
     color: #1877f2;
     margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 .cours p{
     margin-bottom: 5px;
 }
 .item-cours{
-    background-color: green;
      display:flex;
      flex-direction: column;
      align-items: center;
@@ -90,15 +98,77 @@ padding: 10px;
 
 .item-cours button {
     background-color: #1877f2;
-    width: 50px;
+    width: 200px;
+    color: white;
+     border-color: white;
+     margin-top: 3%;
+    border-radius:5px;
 }   
 
 
 .item-cours a{
 text-decoration: none;
     color: white;
+    font-size:20px;
 }
 
-.cours form button{
-    background-color: #1877f2; color: white;
-}
+.item-cours button:hover{
+        background-color: white;
+        border-color: #1877f2;
+    }
+    .item-cours a:hover{
+            cursor: pointer;
+            color: #1877f2;
+            font-size:20px;
+        }
+
+
+        .trait-horizontal {
+            margin-bottom: 20px;
+            margin-left: 20px;
+            width: 80%;
+            margin-top: 5px;
+        }
+        
+        .trait-horizontal hr {
+            border: none; /* supprimer le bord par défaut du trait */
+            border-top: 1px solid #333; /* épaisseur et couleur du trait */
+            width: 90%; /* longueur du trait */
+        }
+        
+        .trait-horizontal h2 {
+            margin: 10px 0; /* espace autour du titre */
+        }    
+        
+        .div_cours{
+            border-radius: 15px;
+           width: 80%;
+            height: 100px;
+            background-image: url(../img/working_picture.jpg);
+            background-size: cover; /* Pour redimensionner l'image pour remplir complètement le conteneur */
+            background-position: center;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-page{
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        .div_cours h4{
+        background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 8px;                
+            font-size: 15px;
+            height: 20px;
+            width: 77px;            
+            margin-left: 10px;
+            color: white;
+            text-align: center;
+        }
+

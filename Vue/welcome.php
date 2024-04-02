@@ -18,23 +18,27 @@
    <link rel="stylesheet" href="../style/style_student.css">
 </head>
 <body>
-    <div class="header">
-        <img src="../img/logo_univ.avif" alt="">
-    <nav>
-            <ul>
-                <li><a href="forum.php">Allez AU Chat !</a></li>
-                <li><a href="../Controleur/Deconnexion_account.php">Se Deconnecter !</a></li>
-            </ul>
-        </nav>
-
-    </div>
- 
+    <?php include "header.php" ?>
     <h1> Bienvenue sur votre espace Etudiant <span><?php echo $_SESSION['login'] ?> </span></h1>
-   
+ <div class="top-page">
+    <div class="div_cours">
+        <h4>Mes Cours</h4>
+    </div>
+
+    <div class="trait-horizontal">
+        <h2>Vue d'ensemble des Modules:</h2>
+        <hr>
+    </div>
+
+
+ </div>
+    
+  
+
     <div class="cours_section">
-        <h2>Liste De Vos Cours </h2>
+        <h2>Liste De Vos Modules </h2>
         <div class="all-cours">
-        <?php $coursController->RecupererCoursById($id); ?>
+        <?php $coursController->RetriveAllModulesById($id); ?>
         </div>
     </div>
    

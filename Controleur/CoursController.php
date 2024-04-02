@@ -10,7 +10,7 @@ class CoursController {
         $this->coursModel = new CoursModel();
     }
 
-    public function ajouterCours($id_prof) {
+    public function AddCours($id_prof) {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Traitement du fichier téléchargé
             if (isset($_FILES['diapositives']) && $_FILES['diapositives']['error'] === UPLOAD_ERR_OK) {
@@ -53,22 +53,23 @@ class CoursController {
 
     }    
 
-    public function RecupererCours($id=null){
-        $cours = $this->coursModel->GetCourOfTeacher($id);
+    public function RetriveCoursForAdmin($id=null){
+        $cours = $this->coursModel->GetCourOfThisTeacher($id);
         include '../Vue/cours_admin.php';
 
 
     }
 
-    public function RecupererCoursById($id=null){
+    public function RetriveAllModulesById($id=null){
         $userModel=new UserModel();
         $profs_id=$userModel->getAllIdProfesseur($id);
-        $cours=array();
+        $modules=array();
         foreach($profs_id as $id_prof){
-            $cours[] = $this->coursModel->GetCourOfTeacher($id_prof);
+
+            $modules[] = $this->coursModel->GetCourOfTeacher($id_prof);
 
         }
-        include '../Vue/cours.php';
+        include '../Vue/module.php';
 
 
     }
