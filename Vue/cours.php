@@ -32,7 +32,7 @@ $cours_prof=$cours_Model->GetCourOfThisTeacher($id_prof);
         <a href="<?= $cour['url'] ?>">Lien Vers La Vidéo </a>
         <img src="../img/working_picture.jpg" alt="" srcset="" class="image_cours">
         <button><a href="<?= $cour['chemin'] ?>" target="_blank">Voir le Cours</a></button>
-        <button><a href="answer_quiz.php?id=<?= $cour['id'] ?>" target="_blank">Répondre Au QCM</a></button>
+        <button><a href="niveau.php?id_cours=<?= $cour['id'] ?>" target="_blank">Répondre Au QCM</a></button>
         </div>       
  
     </div>

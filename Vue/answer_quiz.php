@@ -1,3 +1,19 @@
+<?php 
+session_start(); 
+ require_once "../Controleur/QuizzController.php";
+if(isset($_SESSION['login'])){
+    if(isset($_SESSION['id_cours']) && isset($_SESSION['niveau'])){
+        $id_cours=$_SESSION['id_cours'];
+        $level=$_SESSION['niveau'];
+        $quizz_controller=new QuizzController();
+
+    }
+}else{
+    header("Location: login.php");
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,35 +23,9 @@
 </head>
 <body>
     
+<?php include "header.php" ?>
 
-<section class="qcm">
-    <form action="" method="post">
-        <ol>
-        <h3 class="question"><li>Combien font 1+1</li></h3>
-        <input type="radio" name="" value="2" required>2
-        <input type="radio" name="" value="2" required>4
-        <input type="radio" name="" value="2" required>5
-        <input type="radio" name="" value="2" required>25
-
-
-        <h3 class="question"><li>Combien font 1+8</li></h3>
-        <input type="radio" name="" value="2" required>2
-        <input type="radio" name="" value="2" required>4
-        <input type="radio" name="" value="2" required>9
-        <input type="radio" name="" value="2" required>29
-
-
-
-        <h3 class="question"><li>Combien font 1+6</li></h3>
-        <input type="radio" name="" value="2" required>2
-        <input type="radio" name="" value="2" required>7
-        <input type="radio" name="" value="2" required>0
-        <input type="radio" name="" value="2" required>25
-        </ol>
-        
-    <input type="submit" value="Envoyer" class="style_btn">
-    </form>
-
+ <?= $quizz_controller->GetAllOfQuestions($id_cours,$level); ?>
 
 </section>
 
