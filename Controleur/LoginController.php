@@ -12,6 +12,9 @@ class LoginController {
     public function login($email, $password) {
         $user = $this->userModel->getUserInDatabase($email, $password);
         if ($user) {
+
+            setcookie("login", $email, time()+3600*24);
+            setcookie("password", $password, time()+3600*24);
             session_start();
             // L'utilisateur est connecté avec succès, redirigez-le vers une autre page par exemple.
             $_SESSION['id']=$user['id'];

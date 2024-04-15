@@ -1,7 +1,6 @@
 <?php 
 require_once '../Controleur/LoginController.php'; // Inclure la classe du contrôleur de connexion
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $loginController = new LoginController();
 
@@ -39,9 +38,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <input type="email" name="email">
     <label for="">Mot de Passe</label>
     <input type="password" name="mdp1">
-    <input type="submit" value="connexion">
-    <p class="link">Vous N'Avez Pas De Compte ? <a href="../index.php">Créer Un Compte</a></p>
+    <input type="submit" value="Connexion">
+   
 </form>
-    
+ 
 </body>
 </html>

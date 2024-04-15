@@ -1,7 +1,8 @@
 <?php
 
-require_once '../Model/CoursModel.php';
-require_once '../Model/UserModel.php';
+require_once(__DIR__ . '/../Model/CoursModel.php');
+require_once(__DIR__ . '/../Model/UserModel.php');
+
 class CoursController {
     protected $coursModel;
     protected $cours;

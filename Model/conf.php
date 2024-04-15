@@ -1,10 +1,10 @@
 <?php
 
 class Conf {
-    private static $hostname = "localhost"; // Nom de l'hôte
-    private static $login = "root"; // Login de la base de données
-    private static $password = "root"; // Mot de passe de la base de données
-    private static $database = "phpdatabase"; // Nom de la base de données
+    private static $hostname = "db"; // Nom de l'hôte pour docker sinon localhost
+    private static $login = "php_docker"; // Login de la base de données pour docker sinon pour wamp changer par root
+    private static $password = "pass"; // Mot de passe de la base de données pour docker sinon changez par root
+    private static $database = "php_docker"; // Nom de la base de données pour docker sinon phpdatabase
 
     // Fonction pour récupérer le login de la base de données
     public static function getLogin() {

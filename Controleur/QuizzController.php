@@ -15,8 +15,10 @@ class QuizzController{
         echo '<form action="reponse.php" method="post">
         <ol>';
         foreach($questions as $question){
+            echo '<div class=the_question>';
             echo '<h3 class="question"><li>'.$question['libelleQ'].'</li></h3>';
         $this->GetAllOfAnswers($question['id']);
+            echo '</div>';
         }
         
 

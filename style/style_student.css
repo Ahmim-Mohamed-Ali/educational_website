@@ -172,3 +172,39 @@ text-decoration: none;
             text-align: center;
         }
 
+        .questions{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+.questions form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 50%;
+}
+
+.the_question{
+
+    padding: 10px;
+}
+
+.the_question h3 {
+    color:#1877f2;
+    margin-bottom: 5px;
+}
+
+.style_btn{
+    background-color: #1877f2;
+    color:white;
+    font-size:20px;
+    border-radius: 10px;
+    padding:5px;
+    border-color: white;
+}
+
+.questions{
+    margin-top: 15px;
+}

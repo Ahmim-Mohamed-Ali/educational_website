@@ -20,11 +20,14 @@ if(isset($_SESSION['login'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quizz</title>
+    <link rel="stylesheet" href="../style/style_student.css">
 </head>
 <body>
     
 <?php include "header.php" ?>
 
+
+<section class="questions">
  <?= $quizz_controller->GetAllOfQuestions($id_cours,$level); ?>
 
 </section>

@@ -1,0 +1,33 @@
+body{
+    background-color: #1877f2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+}
+
+
+.niveau {
+    padding:30px;
+    background-color: white;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.niveau span {
+    color:#1877f2;
+}
+
+.niveau form button {
+    background-color: #1877f2;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1.1em;
+    border-radius:10px;
+    border-color: white;
+}

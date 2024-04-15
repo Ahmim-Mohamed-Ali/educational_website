@@ -25,11 +25,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ajouter Votre Cours</title>
+    <link rel="stylesheet" href="../style/add_cours.css">
 </head>
 <body>
 <div class="formulaire">
 
-<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data" class="form">
+    <h2>Ajoutez Votre Cours</h2>
     <div class="titre">
     <label for="titre">Titre du cours :</label>
     <input type="text" id="titre" name="titre" required><br><br>
@@ -50,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     <input type="text" id="video" name="video" required><br><br>
     </div> 
     
-    <input type="submit" value="ajouterCours">
+    <input type="submit" value="ajouterCours" class="submit">
     </form>
  <?php   if (isset($_GET['error'])) {
     $error = $_GET['error'];

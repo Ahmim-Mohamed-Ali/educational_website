@@ -10,7 +10,6 @@
                     <?php endif; ?>
                 <?php elseif($_SESSION['admin']==true) : ?>  
                     <li><a href="addcours.php">Ajouter Un Cours </a></li>
-                    <li><a href="manage.php">Gérer Les QCM</a></li>
                     <li><a href="inscription.php">Inscrire Un Etudiant</a></li>
                     <li><a href="../Controleur/Deconnexion_account.php">Se Deconnecter</a></li>  
                 <?php endif ; ?>    

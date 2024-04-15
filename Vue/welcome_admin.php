@@ -18,10 +18,14 @@ if(isset($_POST['btn-delete'])){
     $coursController->DeleteCours($_POST['id']);
 }
 
-if(isset($_POST['delete'])){echo "Hello";
+if(isset($_POST['delete'])){
     $id_etudiant=$_POST['id_student'];
     $deleteController= new DeleteController();
     $deleteController->DeleteStudent($id_etudiant,$id);
+}
+
+if(isset($_POST['btn-add-qcm'])){
+    
 }
  ?>
 

@@ -8,6 +8,7 @@
         <form action="" method="post">
             <input type="hidden" name="id" value=<?=$cour['id'] ?>>
         <button type="submit" name="btn-delete" >Supprimer</button>
+        <button type="submit" name="btn-add-qcm" >Ajouter Un QCM </button>
         </form>
     </div>
 <?php endforeach; ?>

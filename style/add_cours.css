@@ -1,0 +1,42 @@
+body{
+    min-height: 100%;
+    background-color: #1877f2;
+    width: 100%;
+}
+
+
+.formulaire{
+    display:flex;
+    justify-content: center;
+    align-items: center;height: 100%;
+}
+
+.form{
+    border-radius: 20px;
+    padding:15px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form h2{
+    text-align: center;
+    color: #1877f2;
+    text-decoration: underline;
+}
+
+.form label {
+    font-weight: bold;
+}
+
+.submit {
+    background-color: #1877f2;
+    padding:10px;
+    color:white;
+    text-transform: uppercase;
+    border-radius: 15px;
+    border-color: white;
+    cursor:pointer;
+}
