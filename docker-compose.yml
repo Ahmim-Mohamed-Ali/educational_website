@@ -3,6 +3,9 @@ version: '3.8'
 services:
 
   php:
+    build:
+      context: ./php
+      dockerfile: DockerFile
     image: php:8.2-apache
     container_name: php_project
     volumes:
